@@ -4,12 +4,12 @@ We are attempting to reverse an incoming array to our function in place without 
 
 Instead I will be implementing a dual pointer method by first setting up the pointers. 
 
- 1 let left = 0; 
- 2 let right = input.lenght -1; 
+ 1. let left = 0; 
+ 2. let right = input.lenght -1; 
 
 This will give me an index no I can use on the array input and increment and decrement as we go. For that we'll need a while loop: 
 
- while (left <=right){
+ `<addr>` while (left <=right){
  let temp = input[left];
   input[left] = input[right];
   input[right] = temp;
