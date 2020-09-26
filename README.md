@@ -5,16 +5,22 @@ We are attempting to reverse an incoming array to our function in place without 
 Instead I will be implementing a dual pointer method by first setting up the pointers. 
 
  1. let left = 0; 
+ 
  2. let right = input.lenght -1; 
 
 This will give me an index no I can use on the array input and increment and decrement as we go. For that we'll need a while loop: 
 
- `<addr>` while (left <=right){
- let temp = input[left];
-  input[left] = input[right];
-  input[right] = temp;
-   right--;
-   left++;
- }
+ while (left <=right){//do cool stuff}
 
-As you can see we're simply swapping the left and right characters by pointing to their position in the input array and then moving our pointers towards the center of the array to repeat the process. Once, left = right the problem is solved! 
+Then we've got 4 simple steps we want our loop to perform.
+
+1.let temp = input[left];
+
+2.input[left] = input[right];
+
+3.input[right] = temp;
+
+4.right--;
+  left++;
+
+We first set up a temporary variabl so we don't overwrite inout[left] in step two. Then we set right to left, after which we set the temp variable to right. Finally we increment and decrement our two pointers and repeat this process untill left === right. 
